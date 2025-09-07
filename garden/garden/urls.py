@@ -21,11 +21,13 @@ from . import views
 
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
+
     path("", views.index, name="index"),
     path("index", views.index, name="index"),
     path("home", views.index, name="index")
 ]
 
 # urlpatterns += i18n_patterns(
-#     path('', include('yourapp.urls'))
+#     path('', include('yourapp.urls')),
+#     prefix_default_language=False
 # )

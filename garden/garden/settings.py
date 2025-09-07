@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 import os
 from pathlib import Path
+from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -112,9 +113,9 @@ USE_I18N = True
 USE_TZ = True
 
 LANGUAGES = [
-    ('en', 'English'),
-    ('ru', 'Russian'),
-    ('hy', 'Armenian')
+    ('en', _('English')),
+    ('ru', _('Russian')),
+    ('hy', _('Armenian'))
 ]
 
 LOCALE_PATHS = [
