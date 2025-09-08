@@ -15,6 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path, include
+# from django.views.generic import TemplateView
 from django.conf.urls.i18n import i18n_patterns
 from django.views.i18n import set_language
 from . import views
@@ -23,6 +24,9 @@ urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
 
     path("", views.index, name="index"),
+
+    # path("", TemplateView.as_view(template_name="index.html")),
+
     path("index", views.index, name="index"),
     path("home", views.index, name="index")
 ]
